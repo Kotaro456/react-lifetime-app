@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from './Header';
+import Header from './AppName';
 import Time from './Time';
 import SelectTime from './SelectTime';
 
@@ -17,7 +17,7 @@ class LifeTime extends React.Component {
     render() {
         return(
             <div>
-            <Header />
+            <AppName />
              <Time />
              <SelectTime />
             </div>

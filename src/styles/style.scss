@@ -1,3 +1,6 @@
-body {
-    background: blue;
-}
+@import './base/base.scss';
+@import './base/setting.scss';
+@import './base/components/lifeTime';
+@import './base/components/appName';
+@import './base/components/selectTime';
+@import './base/components/time';

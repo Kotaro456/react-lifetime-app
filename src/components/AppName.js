@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Header extends React.Component {
+class AppName extends React.Component {
     render() {
         return(
             <div>
@@ -11,4 +11,4 @@ class Header extends React.Component {
     }
 }
 
-export default Header;
+export default AppName;
