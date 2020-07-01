@@ -16,7 +16,7 @@ class LifeTime extends React.Component {
     }
     render() {
         return(
-            <div>
+            <div className="lifetime">
             <AppName />
              <Time />
              <SelectTime />
