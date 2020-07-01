@@ -21,6 +21,30 @@ export default {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: 'babel-loader'
+      },
+      {
+        test:/\.scss/,
+        use:[
+          // linkタグに出力する機能
+          "style-loader",
+          {
+            loader: "css-loader",
+            options: {
+              // url()メソッドの取り込みを許可
+              url:true,
+
+              // css-loader,
+              importLoaders: 2
+            }
+          },
+          {
+            loader: "sass-loader",
+            options: {
+              // ソースマップを使うかどうか
+              sourceMap: true
+            }
+          }
+        ]
       }
     ]
   },
