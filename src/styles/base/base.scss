@@ -1,0 +1,13 @@
+html {
+    // remの値調整
+    font-size: 62.5%;
+    padding: 0;
+    margin: 0;
+    background: #111;
+}
+
+body {
+    font-size: $m-size;
+    font-family: "Montserrat","游ゴシック",YuGothic,"ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","メイリオ",Meiryo,sans-serif;;
+    color: #fff;
+}

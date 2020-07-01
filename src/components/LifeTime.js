@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from './AppName';
+import AppName from './AppName';
 import Time from './Time';
 import SelectTime from './SelectTime';
 
