@@ -2,6 +2,7 @@ import React from 'react';
 import AppName from './AppName';
 import Time from './Time';
 import SelectTime from './SelectTime';
+import Message from './Message';
 
 class LifeTime extends React.Component {
     constructor(props){
@@ -17,9 +18,10 @@ class LifeTime extends React.Component {
     render() {
         return(
             <div className="lifetime">
-            <AppName />
+             <AppName />
              <Time />
              <SelectTime />
+             <Message />
             </div>
         );
     }
