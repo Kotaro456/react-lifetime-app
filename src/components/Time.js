@@ -4,8 +4,11 @@ class Time extends React.Component {
   render() {
     return (
       <div>
-        <h1>You have</h1>
-        {this.props.lifeTime !== undefined && <p>{this.props.lifeTime}hours</p>}
+        {this.props.lifeTime !== undefined ? (
+          <h1>You have {this.props.lifeTime} hours</h1>
+        ) : (
+          <h1>You have %?$& hours</h1>
+        )}
       </div>
     );
   }
