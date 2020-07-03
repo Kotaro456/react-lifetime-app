@@ -1,15 +1,28 @@
 import React from "react";
 
 class SelectTime extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      age: "0",
+    };
+  }
   render() {
     return (
       <div className="selectTime">
-        <input
-          type="text"
-          className="selectTime__input"
-          placeholder="Please fill in your age"
-        />
-        <button onClick={this.props.calculate} className="selectTime__button">
+        <form name="form">
+          <input
+            type="number"
+            className="selectTime__input"
+            onChange={(e) => this.setState({ age: e.target.value })}
+            max="80"
+            placeholder="how old r u?"
+          />
+        </form>
+        <button
+          onClick={() => this.props.calculate(this.state.age)}
+          className="selectTime__button"
+        >
           Calculate
         </button>
       </div>

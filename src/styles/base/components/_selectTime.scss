@@ -1,26 +1,27 @@
 .selectTime {
-    width: 300px;
-    margin: $m-size auto;
-    &__input {
-        width: 100%;
-        padding: 10px 15px;
-        font-size: $m-size;
-        border: 2px solid white;
-        box-sizing: border-box;
-        text-align: center;
-        background: #111;
-    }
+  width: 300px;
+  margin: $m-size auto;
+  &__input {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: $m-size;
+    border: 2px solid white;
+    box-sizing: border-box;
+    text-align: center;
+    background: #111;
+    color: white;
+  }
 
-    &__button {
-        width: 100%;
-        margin-top: $m-size;
-        box-sizing: border-box;
-        padding: 10px 15px;
-        font-size: $m-size;
-        border: 2px solid white;
-        background: #111;
-        font-size: $m-size;
-        font-weight: 500;
-        color: white;
-    }
+  &__button {
+    width: 100%;
+    margin-top: $m-size;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    font-size: $m-size;
+    border: 2px solid white;
+    background: #111;
+    font-size: $m-size;
+    font-weight: 500;
+    color: white;
+  }
 }

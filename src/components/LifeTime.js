@@ -9,13 +9,14 @@ class LifeTime extends React.Component {
     super(props);
     this.state = {
       lifeTime: undefined,
-      age: "20",
+      age: "0",
     };
 
     this.calculate = this.calculate.bind(this);
   }
 
-  calculate() {
+  calculate(userAge) {
+    this.setState({ age: userAge });
     // state.ageを文字列から整数に変換する
     const currentAge = parseFloat(this.state.age);
     // 現在の年齢から80歳までの年数
