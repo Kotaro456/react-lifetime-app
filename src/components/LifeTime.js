@@ -9,7 +9,7 @@ class LifeTime extends React.Component {
     super(props);
     this.state = {
       lifeTime: undefined,
-      age: "0",
+      age: null,
     };
 
     this.calculate = this.calculate.bind(this);
@@ -19,6 +19,7 @@ class LifeTime extends React.Component {
     this.setState({ age: userAge });
     // state.ageを文字列から整数に変換する
     const currentAge = parseFloat(this.state.age);
+    console.log(currentAge);
     // 現在の年齢から80歳までの年数
     const leftAge = 80 - currentAge;
     // 睡眠時間(8時間)を引いた残りの16時間の合計
@@ -29,7 +30,7 @@ class LifeTime extends React.Component {
     const lifeTime = leftHours - usedTime;
     // 数値なので文字列に変換
     const setLifeTime = lifeTime.toString();
-
+    console.log(setLifeTime);
     this.setState({ lifeTime: setLifeTime });
   }
 
@@ -37,8 +38,12 @@ class LifeTime extends React.Component {
     return (
       <div className="lifetime">
         <AppName />
-        <Time lifeTime={this.state.lifeTime} />
-        <SelectTime lifeTime={this.state.lifeTime} calculate={this.calculate} />
+        <Time lifeTime={this.state.lifeTime} age={this.state.age} />
+        <SelectTime
+          age={this.state.age}
+          lifeTime={this.state.lifeTime}
+          calculate={this.calculate}
+        />
         <Message />
       </div>
     );
