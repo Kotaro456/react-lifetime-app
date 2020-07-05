@@ -5,8 +5,10 @@
   "author": "Kotaro Ichikawa",
   "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server",
-    "build": "webpack"
+    "start": "node server/server.js",
+    "dev-server": "webpack-dev-server",
+    "build": "webpack",
+    "build:prod": "webpack -p --env production"
   },
   "devDependencies": {
     "@babel/core": "^7.10.3",
@@ -24,6 +26,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
+    "express": "^4.17.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   }
