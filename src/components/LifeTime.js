@@ -18,7 +18,7 @@ class LifeTime extends React.Component {
   calculate(userAge) {
     this.setState({ age: userAge });
     // state.ageを文字列から整数に変換する
-    const currentAge = parseFloat(this.state.age);
+    const currentAge = Number(this.state.age);
     console.log(currentAge);
 
     // 各年代の総自由時間
@@ -89,11 +89,7 @@ class LifeTime extends React.Component {
       <div className="lifetime">
         <AppName />
         <Time lifeTime={this.state.lifeTime} age={this.state.age} />
-        <SelectTime
-          age={this.state.age}
-          lifeTime={this.state.lifeTime}
-          calculate={this.calculate}
-        />
+        <SelectTime calculate={this.calculate} />
         <Message />
       </div>
     );
