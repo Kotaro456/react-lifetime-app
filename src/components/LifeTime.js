@@ -17,7 +17,7 @@ class LifeTime extends React.Component {
 
   calculate(userAge) {
     this.setState({ age: userAge });
-    // state.ageを文字列から整数に変換する
+    // state.ageを文字列から数値に変換する
     const currentAge = Number(this.state.age);
     console.log(currentAge);
 
