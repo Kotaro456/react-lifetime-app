@@ -1,7 +1,16 @@
 .message {
-    margin-top: $xxl-size;
-    &__conditions {
-        margin-top: $xl-size;
-        list-style: none;
+  margin-top: $xxl-size;
+  &__conditions {
+    margin-top: $xl-size;
+    list-style: none;
+    text-align: center;
+
+    &-list {
+      margin-top: $s-size;
+
+      &.third {
+        margin-bottom: $l-size;
+      }
     }
+  }
 }

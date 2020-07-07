@@ -1,9 +1,19 @@
-.appName {
-    &__name {
-        font-family: Monotype Corsiva;
-    }
+@mixin mq($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
 
-    &__message {
-        margin: $xl-size 0;
+.appName {
+  &__name {
+    font-family: Monotype Corsiva;
+  }
+
+  &__message {
+    margin: $xl-size 0;
+
+    @include mq(sm) {
+      font-size: $m-size;
     }
+  }
 }

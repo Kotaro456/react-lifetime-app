@@ -6,4 +6,8 @@ $l-size: 3.2rem;
 $xl-size: 4.8rem;
 $xxl-size: 6.4rem;
 
-
+// breakpoint
+$breakpoints: (
+  "sm": "screen and (max-width: 559px)",
+  "md": "screen and (max-width: 959px)",
+) !default;

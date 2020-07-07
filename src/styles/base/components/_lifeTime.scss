@@ -1,7 +1,18 @@
+@mixin mq($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
 .lifetime {
-    background: #111;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: $xxl-size $m-size;
-    text-align: center;
+  background: #111;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: $xxl-size $m-size;
+  text-align: center;
+
+  @include mq(sm) {
+    padding: $s-size;
+  }
 }
