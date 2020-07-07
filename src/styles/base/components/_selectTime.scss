@@ -18,10 +18,16 @@
     box-sizing: border-box;
     padding: 10px 15px;
     font-size: $m-size;
-    border: 2px solid white;
-    background: #111;
+    border-bottom: 3px solid darken(#444, 30%);
+    background: #444;
     font-size: $m-size;
     font-weight: 500;
     color: white;
+    cursor: pointer;
+
+    &:active {
+      margin-top: 1.9rem;
+      border: none;
+    }
   }
 }
