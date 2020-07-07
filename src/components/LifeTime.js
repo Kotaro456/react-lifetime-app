@@ -9,16 +9,15 @@ class LifeTime extends React.Component {
     super(props);
     this.state = {
       lifeTime: undefined,
-      age: null,
+      age: undefined,
     };
 
     this.calculate = this.calculate.bind(this);
   }
 
   calculate(userAge) {
-    this.setState({ age: userAge });
     // state.ageを文字列から数値に変換する
-    const currentAge = Number(this.state.age);
+    const currentAge = Number(userAge);
     console.log(currentAge);
 
     // 各年代の総自由時間
