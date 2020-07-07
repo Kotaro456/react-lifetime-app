@@ -7,8 +7,9 @@ class SelectTime extends React.Component {
   }
   calculate(e) {
     e.preventDefault();
-
-    this.props.calculate(e.target.elements.UserAge.value);
+    if (e.target.elements.UserAge.value !== "") {
+      this.props.calculate(e.target.elements.UserAge.value);
+    }
   }
   render() {
     return (
