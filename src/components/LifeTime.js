@@ -9,7 +9,6 @@ class LifeTime extends React.Component {
     super(props);
     this.state = {
       lifeTime: undefined,
-      age: undefined,
     };
 
     this.calculate = this.calculate.bind(this);
@@ -87,7 +86,7 @@ class LifeTime extends React.Component {
     return (
       <div className="lifetime">
         <AppName />
-        <Time lifeTime={this.state.lifeTime} age={this.state.age} />
+        <Time lifeTime={this.state.lifeTime} />
         <SelectTime calculate={this.calculate} />
         <Message />
       </div>
