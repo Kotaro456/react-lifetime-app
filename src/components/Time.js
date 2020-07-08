@@ -5,9 +5,15 @@ class Time extends React.Component {
     return (
       <div>
         {this.props.lifeTime !== undefined ? (
-          <h1>You have {this.props.lifeTime} hours</h1>
+          <div>
+            <h1>You have {this.props.lifeTime} HOURS</h1>
+            <h1>You have {this.props.lifeDay} DAYS</h1>
+          </div>
         ) : (
-          <h1>You have %?$& hours</h1>
+          <div>
+            <h1>You have %?$& HOURS</h1>
+            <h1>You have %?$& DAYS</h1>
+          </div>
         )}
       </div>
     );

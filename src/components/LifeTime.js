@@ -9,9 +9,17 @@ class LifeTime extends React.Component {
     super(props);
     this.state = {
       lifeTime: undefined,
+      lifeDay: undefined,
     };
 
     this.calculate = this.calculate.bind(this);
+    this.calculateToDay = this.calculateToDay.bind(this);
+  }
+
+  calculateToDay(Hours) {
+    const lifeDay = parseInt(Hours / 24, 10);
+    console.log(lifeDay);
+    this.setState({ lifeDay: lifeDay });
   }
 
   calculate(userAge) {
@@ -39,6 +47,7 @@ class LifeTime extends React.Component {
       //   確認用
       console.log(setLifeTime);
       this.setState({ lifeTime: setLifeTime });
+      this.calculateToDay(setLifeTime);
 
       //   小中高大期間
     } else if (currentAge >= 7 && currentAge <= 22) {
@@ -54,6 +63,7 @@ class LifeTime extends React.Component {
         const setLifeTime = freeHour + timeOfUni + timeTill65 + timeTill80;
         console.log(setLifeTime);
         this.setState({ lifeTime: setLifeTime });
+        this.calculateToDay(setLifeTime);
 
         // 大学
       } else {
@@ -62,6 +72,7 @@ class LifeTime extends React.Component {
         const setLifeTime = freeHour + timeTill65 + timeTill80;
         console.log(setLifeTime);
         this.setState({ lifeTime: setLifeTime });
+        this.calculateToDay(setLifeTime);
       }
 
       //   社会人
@@ -71,6 +82,7 @@ class LifeTime extends React.Component {
       const setLifeTime = freeHour + timeTill80;
       console.log(setLifeTime);
       this.setState({ lifeTime: setLifeTime });
+      this.calculateToDay(setLifeTime);
 
       //   老後
     } else if (currentAge >= 66) {
@@ -79,6 +91,7 @@ class LifeTime extends React.Component {
       const setLifeTime = freeHour;
       console.log(setLifeTime);
       this.setState({ lifeTime: setLifeTime });
+      this.calculateToDay(setLifeTime);
     }
   }
 
@@ -86,7 +99,7 @@ class LifeTime extends React.Component {
     return (
       <div className="lifetime">
         <AppName />
-        <Time lifeTime={this.state.lifeTime} />
+        <Time lifeTime={this.state.lifeTime} lifeDay={this.state.lifeDay} />
         <SelectTime calculate={this.calculate} />
         <Message />
       </div>
